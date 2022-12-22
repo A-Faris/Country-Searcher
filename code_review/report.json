@@ -1,0 +1,53 @@
+{
+ "files": [
+  {
+   "file_name": "./airports/airports.py",
+   "errors": [
+    "airports/airports.py:9:0: C0103: Function name \"loadWeatherForLocation\" doesn't conform to '[a-z_][a-z0-9_]{2,30}$' pattern ('[a-z_][a-z0-9_]{2,30}$' pattern) (invalid-name)",
+    "airports/airports.py:9:27: W0613: Unused argument 'lat' (unused-argument)",
+    "airports/airports.py:9:32: W0613: Unused argument 'lng' (unused-argument)",
+    "airports/airports.py:14:0: C0103: Function name \"renderFlights\" doesn't conform to '[a-z_][a-z0-9_]{2,30}$' pattern ('[a-z_][a-z0-9_]{2,30}$' pattern) (invalid-name)",
+    "airports/airports.py:22:0: C0103: Function name \"getFlightsFromIata\" doesn't conform to '[a-z_][a-z0-9_]{2,30}$' pattern ('[a-z_][a-z0-9_]{2,30}$' pattern) (invalid-name)",
+    "airports/airports.py:22:23: W0613: Unused argument 'iata' (unused-argument)",
+    "airports/airports.py:27:0: C0103: Function name \"loadAirportJSON\" doesn't conform to '[a-z_][a-z0-9_]{2,30}$' pattern ('[a-z_][a-z0-9_]{2,30}$' pattern) (invalid-name)",
+    "airports/airports.py:32:0: C0103: Function name \"findAirportsFromName\" doesn't conform to '[a-z_][a-z0-9_]{2,30}$' pattern ('[a-z_][a-z0-9_]{2,30}$' pattern) (invalid-name)",
+    "airports/airports.py:32:31: C0103: Argument name \"airportData\" doesn't conform to '[a-z_][a-z0-9_]{2,30}$|[A-Z_][A-Z0-9_]{2,30}$' pattern ('[a-z_][a-z0-9_]{2,30}$|[A-Z_][A-Z0-9_]{2,30}$' pattern) (invalid-name)",
+    "airports/airports.py:32:25: W0613: Unused argument 'name' (unused-argument)",
+    "airports/airports.py:32:31: W0613: Unused argument 'airportData' (unused-argument)",
+    "airports/airports.py:39:0: C0103: Function name \"findAirportFromIata\" doesn't conform to '[a-z_][a-z0-9_]{2,30}$' pattern ('[a-z_][a-z0-9_]{2,30}$' pattern) (invalid-name)",
+    "airports/airports.py:39:30: C0103: Argument name \"airportData\" doesn't conform to '[a-z_][a-z0-9_]{2,30}$|[A-Z_][A-Z0-9_]{2,30}$' pattern ('[a-z_][a-z0-9_]{2,30}$|[A-Z_][A-Z0-9_]{2,30}$' pattern) (invalid-name)",
+    "airports/airports.py:39:24: W0613: Unused argument 'iata' (unused-argument)",
+    "airports/airports.py:39:30: W0613: Unused argument 'airportData' (unused-argument)",
+    "airports/airports.py:46:0: C0103: Function name \"getSearch\" doesn't conform to '[a-z_][a-z0-9_]{2,30}$' pattern ('[a-z_][a-z0-9_]{2,30}$' pattern) (invalid-name)",
+    "airports/airports.py:57:4: C0103: Variable name \"airportData\" doesn't conform to '[a-z_][a-z0-9_]{2,30}$|[A-Z_][A-Z0-9_]{2,30}$' pattern ('[a-z_][a-z0-9_]{2,30}$|[A-Z_][A-Z0-9_]{2,30}$' pattern) (invalid-name)",
+    "airports/airports.py:60:8: C0103: Variable name \"airportSearch\" doesn't conform to '[a-z_][a-z0-9_]{2,30}$|[A-Z_][A-Z0-9_]{2,30}$' pattern ('[a-z_][a-z0-9_]{2,30}$|[A-Z_][A-Z0-9_]{2,30}$' pattern) (invalid-name)",
+    "airports/airports.py:57:4: W0612: Unused variable 'airportData' (unused-variable)",
+    "airports/airports.py:60:8: W0612: Unused variable 'airportSearch' (unused-variable)",
+    "airports/airports.py:1:0: W0612: Unused variable 'requests' (unused-variable)",
+    "airports/airports.py:9:0: W0612: Unused variable 'loadWeatherForLocation' (unused-variable)",
+    "airports/airports.py:14:0: W0612: Unused variable 'renderFlights' (unused-variable)",
+    "airports/airports.py:22:0: W0612: Unused variable 'getFlightsFromIata' (unused-variable)",
+    "airports/airports.py:32:0: W0612: Unused variable 'findAirportsFromName' (unused-variable)",
+    "airports/airports.py:39:0: W0612: Unused variable 'findAirportFromIata' (unused-variable)",
+    "airports/airports.py:1:0: W0611: Unused import requests (unused-import)"
+   ],
+   "score": 3.6
+  },
+  {
+   "file_name": "./blackjack/blackjack.py",
+   "errors": [
+    "countries/countries.py:4:0: C0103: Function name \"printData\" doesn't conform to '[a-z_][a-z0-9_]{2,30}$' pattern ('[a-z_][a-z0-9_]{2,30}$' pattern) (invalid-name)",
+    "countries/countries.py:4:14: C0103: Argument name \"countryData\" doesn't conform to '[a-z_][a-z0-9_]{2,30}$|[A-Z_][A-Z0-9_]{2,30}$' pattern ('[a-z_][a-z0-9_]{2,30}$|[A-Z_][A-Z0-9_]{2,30}$' pattern) (invalid-name)",
+    "countries/countries.py:8:0: C0103: Function name \"fetchData\" doesn't conform to '[a-z_][a-z0-9_]{2,30}$' pattern ('[a-z_][a-z0-9_]{2,30}$' pattern) (invalid-name)",
+    "countries/countries.py:8:14: C0103: Argument name \"countryName\" doesn't conform to '[a-z_][a-z0-9_]{2,30}$|[A-Z_][A-Z0-9_]{2,30}$' pattern ('[a-z_][a-z0-9_]{2,30}$|[A-Z_][A-Z0-9_]{2,30}$' pattern) (invalid-name)",
+    "countries/countries.py:8:14: W0613: Unused argument 'countryName' (unused-argument)",
+    "countries/countries.py:20:16: W0141: Used builtin function 'input' (bad-builtin)",
+    "countries/countries.py:24:8: C0103: Variable name \"countryData\" doesn't conform to '[a-z_][a-z0-9_]{2,30}$|[A-Z_][A-Z0-9_]{2,30}$' pattern ('[a-z_][a-z0-9_]{2,30}$|[A-Z_][A-Z0-9_]{2,30}$' pattern) (invalid-name)",
+    "countries/countries.py:1:0: W0612: Unused variable 'requests' (unused-variable)",
+    "countries/countries.py:1:0: W0611: Unused import requests (unused-import)"
+   ],
+   "score": 55.0
+  }
+ ],
+ "average_score": 29.3
+}
