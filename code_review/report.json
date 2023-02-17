@@ -1,6 +1,17 @@
 {
  "files": [
   {
+   "file_name": "./countries/countries.py",
+   "errors": [
+    "countries/countries.py:8:14: W0613: Unused argument 'countryName' (unused-argument)",
+    "countries/countries.py:12:0: C0103: Function name \"main\" doesn't conform to the `camelCase` group in the '(?:(?P<snake_case>[a-z_]+)|(?P<PascalCase>[^a-z][A-Za-z]+)|(?P<camelCase>[^A-Z][A-Za-z]+))$' pattern (invalid-name)",
+    "countries/countries.py:24:8: C0103: Variable name \"countryData\" doesn't conform to the `snake_case` group in the '(?:(?P<snake_case>[a-z_]+)|(?P<PascalCase>[^a-z][A-Za-z]+)|(?P<camelCase>[^A-Z][A-Za-z]+))$' pattern (invalid-name)",
+    "countries/countries.py:1:0: W0612: Unused variable 'requests' (unused-variable)",
+    "countries/countries.py:1:0: W0611: Unused import requests (unused-import)"
+   ],
+   "score": 75.0
+  },
+  {
    "file_name": "./airports/airports.py",
    "errors": [
     "airports/airports.py:9:27: W0613: Unused argument 'lat' (unused-argument)",
@@ -12,6 +23,7 @@
     "airports/airports.py:39:30: W0613: Unused argument 'airportData' (unused-argument)",
     "airports/airports.py:57:4: W0612: Unused variable 'airportData' (unused-variable)",
     "airports/airports.py:60:8: W0612: Unused variable 'airportSearch' (unused-variable)",
+    "airports/airports.py:6:0: C0103: Variable name \"console\" doesn't conform to the `camelCase` group in the '(?:(?P<snake_case>[a-z_]+)|(?P<PascalCase>[^a-z][A-Za-z]+)|(?P<camelCase>[^A-Z][A-Za-z]+))$' pattern (invalid-name)",
     "airports/airports.py:50:0: C0103: Function name \"main\" doesn't conform to the `camelCase` group in the '(?:(?P<snake_case>[a-z_]+)|(?P<PascalCase>[^a-z][A-Za-z]+)|(?P<camelCase>[^A-Z][A-Za-z]+))$' pattern (invalid-name)",
     "airports/airports.py:32:31: C0103: Argument name \"airportData\" doesn't conform to the `snake_case` group in the '(?:(?P<snake_case>[a-z_]+)|(?P<UPPER_CASE>[A-Z_]+)|(?P<PascalCase>[^a-z][A-Za-z]+)|(?P<camelCase>[^A-Z][A-Za-z]+))$' pattern (invalid-name)",
     "airports/airports.py:39:30: C0103: Argument name \"airportData\" doesn't conform to the `snake_case` group in the '(?:(?P<snake_case>[a-z_]+)|(?P<UPPER_CASE>[A-Z_]+)|(?P<PascalCase>[^a-z][A-Za-z]+)|(?P<camelCase>[^A-Z][A-Za-z]+))$' pattern (invalid-name)",
@@ -23,19 +35,8 @@
     "airports/airports.py:39:0: W0612: Unused variable 'findAirportFromIata' (unused-variable)",
     "airports/airports.py:1:0: W0611: Unused import requests (unused-import)"
    ],
-   "score": 32.1
-  },
-  {
-   "file_name": "./blackjack/blackjack.py",
-   "errors": [
-    "countries/countries.py:8:14: W0613: Unused argument 'countryName' (unused-argument)",
-    "countries/countries.py:12:0: C0103: Function name \"main\" doesn't conform to the `camelCase` group in the '(?:(?P<snake_case>[a-z_]+)|(?P<PascalCase>[^a-z][A-Za-z]+)|(?P<camelCase>[^A-Z][A-Za-z]+))$' pattern (invalid-name)",
-    "countries/countries.py:24:8: C0103: Variable name \"countryData\" doesn't conform to the `snake_case` group in the '(?:(?P<snake_case>[a-z_]+)|(?P<PascalCase>[^a-z][A-Za-z]+)|(?P<camelCase>[^A-Z][A-Za-z]+))$' pattern (invalid-name)",
-    "countries/countries.py:1:0: W0612: Unused variable 'requests' (unused-variable)",
-    "countries/countries.py:1:0: W0611: Unused import requests (unused-import)"
-   ],
-   "score": 75.0
+   "score": 28.6
   }
  ],
- "average_score": 53.5
+ "average_score": 51.8
 }
