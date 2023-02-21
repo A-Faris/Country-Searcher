@@ -3,16 +3,14 @@
   {
    "file_name": "./countries/countries.py",
    "errors": [
-    "countries/countries.py:8:14: W0613: Unused argument 'countryName' (unused-argument)",
-    "countries/countries.py:12:0: C0103: Function name \"main\" doesn't conform to the `camelCase` group in the '(?:(?P<snake_case>[a-z_]+)|(?P<PascalCase>[^a-z][A-Za-z]+)|(?P<camelCase>[^A-Z][A-Za-z]+))$' pattern (invalid-name)",
-    "countries/countries.py:24:8: C0103: Variable name \"countryData\" doesn't conform to the `snake_case` group in the '(?:(?P<snake_case>[a-z_]+)|(?P<PascalCase>[^a-z][A-Za-z]+)|(?P<camelCase>[^A-Z][A-Za-z]+))$' pattern (invalid-name)",
-    "countries/countries.py:1:0: W0612: Unused variable 'requests' (unused-variable)",
-    "countries/countries.py:1:0: W0611: Unused import requests (unused-import)"
+    "countries/countries.py:18:15: W0613: Unused argument 'country_name' (unused-argument)",
+    "countries/countries.py:1:0: W0612: Unused variable 'get' (unused-variable)",
+    "countries/countries.py:1:0: W0611: Unused get imported from requests (unused-import)"
    ],
-   "score": 75.0
+   "score": 89.3
   },
   {
-   "file_name": "./airports/airports.py",
+   "file_name": "./countries/test_countries.py",
    "errors": [
     "airports/airports.py:9:27: W0613: Unused argument 'lat' (unused-argument)",
     "airports/airports.py:9:32: W0613: Unused argument 'lng' (unused-argument)",
@@ -38,5 +36,5 @@
    "score": 28.6
   }
  ],
- "average_score": 51.8
+ "average_score": 59.0
 }
