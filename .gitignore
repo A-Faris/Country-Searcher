@@ -82,4 +82,3 @@ package-lock.json
 __pycache__
 .ipynb_checkpoints
 venv/
-.pytest_cache
