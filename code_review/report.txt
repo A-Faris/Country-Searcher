@@ -1,3 +1,4 @@
+./countries/test_countries.py
 ./countries/countries.py
 ************* Module countries
 countries/countries.py:18:15: W0613: Unused argument 'country_name' (unused-argument)
@@ -7,7 +8,6 @@ countries/countries.py:1:0: W0611: Unused get imported from requests (unused-imp
 -----------------------------------
 Your code has been rated at 8.93/10
 
-./countries/test_countries.py
 ./airports/airports.py
 ************* Module airports
 airports/airports.py:9:30: W0613: Unused argument 'lat' (unused-argument)
@@ -18,16 +18,16 @@ airports/airports.py:36:28: W0613: Unused argument 'name' (unused-argument)
 airports/airports.py:36:39: W0613: Unused argument 'airport_data' (unused-argument)
 airports/airports.py:45:27: W0613: Unused argument 'iata' (unused-argument)
 airports/airports.py:45:38: W0613: Unused argument 'airport_data' (unused-argument)
-airports/airports.py:67:4: W0612: Unused variable 'airport_data' (unused-variable)
-airports/airports.py:70:8: W0612: Unused variable 'airport_search' (unused-variable)
 airports/airports.py:1:0: W0612: Unused variable 'requests' (unused-variable)
 airports/airports.py:9:0: W0612: Unused variable 'load_weather_for_location' (unused-variable)
 airports/airports.py:15:0: W0612: Unused variable 'render_flights' (unused-variable)
 airports/airports.py:24:0: W0612: Unused variable 'get_flights_from_iata' (unused-variable)
 airports/airports.py:36:0: W0612: Unused variable 'find_airports_from_name' (unused-variable)
 airports/airports.py:45:0: W0612: Unused variable 'find_airport_from_iata' (unused-variable)
+airports/airports.py:65:4: W0612: Unused variable 'airport_data' (unused-variable)
+airports/airports.py:66:4: W0612: Unused variable 'airport_search' (unused-variable)
 airports/airports.py:1:0: W0611: Unused import requests (unused-import)
 
 -----------------------------------
-Your code has been rated at 4.14/10
+Your code has been rated at 3.46/10
 
