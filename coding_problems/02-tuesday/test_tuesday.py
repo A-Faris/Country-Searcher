@@ -1,5 +1,3 @@
-# pylint: skip-file
-
 import pytest
 
 from tuesday import duplicate_count
