@@ -1,5 +1,3 @@
-# pylint: skip-file
-
 import pytest
 
 from wednesday import reverse_words

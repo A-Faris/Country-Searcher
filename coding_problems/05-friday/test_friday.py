@@ -1,5 +1,3 @@
-# pylint: skip-file
-
 import pytest
 
 from friday import cleaned_counts
