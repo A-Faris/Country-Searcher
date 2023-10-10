@@ -1,7 +1,7 @@
 {
  "files": [
   {
-   "file_name": "./countries/countries.py",
+   "file_name": "./coding_problems/01-monday/monday.py",
    "errors": [
     "countries/countries.py:18:15: W0613: Unused argument 'country_name' (unused-argument)",
     "countries/countries.py:1:0: W0612: Unused variable 'get' (unused-variable)",
@@ -10,7 +10,7 @@
    "score": 89.3
   },
   {
-   "file_name": "./countries/test_countries.py",
+   "file_name": "./airports/airports.py",
    "errors": [
     "airports/airports.py:9:30: W0613: Unused argument 'lat' (unused-argument)",
     "airports/airports.py:9:40: W0613: Unused argument 'lng' (unused-argument)",

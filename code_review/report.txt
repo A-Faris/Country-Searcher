@@ -1,3 +1,14 @@
+./coding_problems/01-monday/monday.py
+./coding_problems/01-monday/test_monday.py
+./coding_problems/03-wednesday/test_wednesday.py
+./coding_problems/03-wednesday/wednesday.py
+./coding_problems/02-tuesday/test_tuesday.py
+./coding_problems/02-tuesday/tuesday.py
+./coding_problems/05-friday/test_friday.py
+./coding_problems/05-friday/friday.py
+./coding_problems/04-thursday/thursday.py
+./coding_problems/04-thursday/test_thursday.py
+./countries/test_countries.py
 ./countries/countries.py
 ************* Module countries
 countries/countries.py:18:15: W0613: Unused argument 'country_name' (unused-argument)
@@ -7,7 +18,6 @@ countries/countries.py:1:0: W0611: Unused get imported from requests (unused-imp
 -----------------------------------
 Your code has been rated at 8.93/10
 
-./countries/test_countries.py
 ./airports/airports.py
 ************* Module airports
 airports/airports.py:9:30: W0613: Unused argument 'lat' (unused-argument)
@@ -31,13 +41,3 @@ airports/airports.py:1:0: W0611: Unused import requests (unused-import)
 -----------------------------------
 Your code has been rated at 3.46/10
 
-./coding_problems/02-tuesday/tuesday.py
-./coding_problems/02-tuesday/test_tuesday.py
-./coding_problems/01-monday/monday.py
-./coding_problems/01-monday/test_monday.py
-./coding_problems/04-thursday/test_thursday.py
-./coding_problems/04-thursday/thursday.py
-./coding_problems/05-friday/friday.py
-./coding_problems/05-friday/test_friday.py
-./coding_problems/03-wednesday/test_wednesday.py
-./coding_problems/03-wednesday/wednesday.py
