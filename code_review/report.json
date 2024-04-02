@@ -1,7 +1,7 @@
 {
  "files": [
   {
-   "file_name": "./countries/test_countries.py",
+   "file_name": "./coding_problems/02-tuesday/test_tuesday.py",
    "errors": [
     "countries/countries.py:18:15: W0613: Unused argument 'country_name' (unused-argument)",
     "countries/countries.py:1:0: W0612: Unused variable 'get' (unused-variable)",
