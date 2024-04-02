@@ -10,13 +10,9 @@
 ./coding_problems/05-friday/friday.py
 ./countries/test_countries.py
 ./countries/countries.py
-************* Module countries
-countries/countries.py:18:15: W0613: Unused argument 'country_name' (unused-argument)
-countries/countries.py:1:0: W0612: Unused variable 'get' (unused-variable)
-countries/countries.py:1:0: W0611: Unused get imported from requests (unused-import)
 
------------------------------------
-Your code has been rated at 8.93/10
+------------------------------------
+Your code has been rated at 10.00/10
 
 ./airports/airports.py
 ************* Module airports
