@@ -4,7 +4,7 @@ from requests import get
 class APIError(Exception):
     """Describes an error triggered by a failing API call."""
 
-    def __init__(self, message: str, code: int=500):
+    def __init__(self, message: str, code: int = 500):
         """Creates a new APIError instance."""
         self.message = message
         self.code = code
@@ -17,7 +17,16 @@ def print_data(country_data: dict):
 
 def fetch_data(country_name: str) -> dict:
     """Returns a dict of country data from the API."""
-    return {}
+    response = get(
+        f'https://restcountries.com/v3.1/name/{country_name.lower()}')
+
+    if response.status_code == 404:
+        raise APIError("Unable to locate matching country.", 404)
+    if response.status_code == 500:
+        raise APIError("Unable to connect to server.")
+
+    data = response.json()[0]
+    return data["name"]['common'] + data['flag']
 
 
 def main():
