@@ -1,2 +1,2 @@
 def reverse_words(text: str) -> str:
-    pass
+    return " ".join([i[::-1] for i in text.split()])
