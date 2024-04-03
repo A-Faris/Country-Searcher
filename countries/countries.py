@@ -1,5 +1,8 @@
 from requests import get
 
+from rich.traceback import install
+install()
+
 
 class APIError(Exception):
     """Describes an error triggered by a failing API call."""
@@ -25,8 +28,13 @@ def fetch_data(country_name: str) -> dict:
     if response.status_code == 500:
         raise APIError("Unable to connect to server.")
 
-    data = response.json()[0]
-    return data["name"]['common'] + data['flag']
+    if type(response.json()) == list:
+        data = response.json()[0]
+    else:
+        data = response.json()
+    return {"name": data.get("name"),
+            "flag": data.get("flag"),
+            "languages": data.get("languages")}
 
 
 def main():

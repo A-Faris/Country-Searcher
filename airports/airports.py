@@ -3,8 +3,12 @@ from rich.prompt import Prompt
 from rich.console import Console
 import argparse
 
+from rich import print
+from rich.traceback import install
+install()
+
 # Instead of using print(), you should use the Console from Rich instead.
-console = Console()
+console = Console(record=True)
 
 
 def load_weather_for_location(lat: str, lng: str) -> dict:
@@ -31,6 +35,7 @@ def get_flights_from_iata(iata: str) -> list:
 def load_airport_JSON() -> list:
     """Load airport data from airports.json"""
 
+    open(airports.json)
     pass
 
 
@@ -54,9 +59,24 @@ def find_airport_from_iata(iata: str, airport_data: list) -> dict:
 
 def get_airport() -> str:
     """Get the airport from the CLI"""
-    pass
+    parser = argparse.ArgumentParser(prog='airports',
+                                     usage='%(prog)s [options]',
+                                     description="name of the airport")
+
+    parser.add_argument("--name",
+                        type=str,
+                        default="London Luton",
+                        help="add airport name")
+    args = parser.parse_args()
+
+    name_upper = args.name.upper()
+
+    return name_upper
 
 
 if __name__ == "__main__":
     airport_data = load_airport_JSON()
     airport_search = get_airport()
+
+# console.print_exception()
+console.save_html("html_file.html")
