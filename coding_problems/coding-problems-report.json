@@ -1,12 +1,12 @@
 {
-    "created": 1712078388.178488,
-    "duration": 1.313767433166504,
+    "created": 1712149903.023432,
+    "duration": 1.2547669410705566,
     "exitcode": 1,
     "root": "/home/runner/work/Coursework-Networking-Week-1/Coursework-Networking-Week-1/coding_problems",
     "environment": {},
     "summary": {
-        "passed": 209,
-        "failed": 183,
+        "passed": 238,
+        "failed": 154,
         "total": 392,
         "collected": 392
     }
