@@ -1,3 +1,13 @@
+./coding_problems/02-tuesday/test_tuesday.py
+./coding_problems/02-tuesday/tuesday.py
+./coding_problems/04-thursday/test_thursday.py
+./coding_problems/04-thursday/thursday.py
+./coding_problems/03-wednesday/test_wednesday.py
+./coding_problems/03-wednesday/wednesday.py
+./coding_problems/01-monday/test_monday.py
+./coding_problems/01-monday/monday.py
+./coding_problems/05-friday/test_friday.py
+./coding_problems/05-friday/friday.py
 ./countries/test_countries.py
 ./countries/countries.py
 ************* Module countries
@@ -6,50 +16,18 @@ countries/countries.py:31:7: C0123: Use isinstance() rather than type() for a ty
 -----------------------------------
 Your code has been rated at 9.74/10
 
-./coding_problems/04-thursday/thursday.py
-./coding_problems/04-thursday/test_thursday.py
-./coding_problems/05-friday/friday.py
-./coding_problems/05-friday/test_friday.py
-./coding_problems/02-tuesday/test_tuesday.py
-./coding_problems/02-tuesday/tuesday.py
-./coding_problems/01-monday/monday.py
-./coding_problems/01-monday/test_monday.py
-./coding_problems/03-wednesday/wednesday.py
-./coding_problems/03-wednesday/test_wednesday.py
 ./airports/airports.py
 ************* Module airports
-airports/airports.py:6:0: W0622: Redefining built-in 'print' (redefined-builtin)
-airports/airports.py:17:4: W0107: Unnecessary pass statement (unnecessary-pass)
-airports/airports.py:14:30: W0613: Unused argument 'lat' (unused-argument)
-airports/airports.py:14:40: W0613: Unused argument 'lng' (unused-argument)
-airports/airports.py:32:4: W0107: Unnecessary pass statement (unnecessary-pass)
-airports/airports.py:29:26: W0613: Unused argument 'iata' (unused-argument)
-airports/airports.py:35:0: C0103: Function name "load_airport_JSON" doesn't conform to '(?:(?P<snake_case>[a-z_]+)|(?P<PascalCase>[^a-z][A-Za-z]+)|(?P<camelCase>[^A-Z][A-Za-z]+))$' pattern (invalid-name)
-airports/airports.py:38:4: R1732: Consider using 'with' for resource-allocating operations (consider-using-with)
-airports/airports.py:38:4: W1514: Using open without explicitly specifying an encoding (unspecified-encoding)
-airports/airports.py:38:9: E0602: Undefined variable 'airports' (undefined-variable)
-airports/airports.py:39:4: W0107: Unnecessary pass statement (unnecessary-pass)
-airports/airports.py:48:4: W0107: Unnecessary pass statement (unnecessary-pass)
-airports/airports.py:42:28: W0613: Unused argument 'name' (unused-argument)
-airports/airports.py:42:39: W0613: Unused argument 'airport_data' (unused-argument)
-airports/airports.py:57:4: W0107: Unnecessary pass statement (unnecessary-pass)
-airports/airports.py:51:27: W0613: Unused argument 'iata' (unused-argument)
-airports/airports.py:51:38: W0613: Unused argument 'airport_data' (unused-argument)
-airports/airports.py:78:4: E1111: Assigning result of a function call, where the function has no return (assignment-from-no-return)
-airports/airports.py:1:0: W0612: Unused variable 'requests' (unused-variable)
-airports/airports.py:14:0: W0612: Unused variable 'load_weather_for_location' (unused-variable)
-airports/airports.py:20:0: W0612: Unused variable 'render_flights' (unused-variable)
-airports/airports.py:29:0: W0612: Unused variable 'get_flights_from_iata' (unused-variable)
-airports/airports.py:42:0: W0612: Unused variable 'find_airports_from_name' (unused-variable)
-airports/airports.py:51:0: W0612: Unused variable 'find_airport_from_iata' (unused-variable)
-airports/airports.py:78:4: W0612: Unused variable 'airport_data' (unused-variable)
-airports/airports.py:79:4: W0612: Unused variable 'airport_search' (unused-variable)
-airports/airports.py:2:0: W0612: Unused variable 'Prompt' (unused-variable)
-airports/airports.py:6:0: W0612: Unused variable 'print' (unused-variable)
-airports/airports.py:1:0: W0611: Unused import requests (unused-import)
-airports/airports.py:2:0: W0611: Unused Prompt imported from rich.prompt (unused-import)
-airports/airports.py:6:0: W0611: Unused print imported from rich (unused-import)
+airports/airports.py:7:0: W0622: Redefining built-in 'print' (redefined-builtin)
+airports/airports.py:20:4: W0107: Unnecessary pass statement (unnecessary-pass)
+airports/airports.py:17:30: W0613: Unused argument 'lat' (unused-argument)
+airports/airports.py:17:40: W0613: Unused argument 'lng' (unused-argument)
+airports/airports.py:42:0: C0103: Function name "load_airport_JSON" doesn't conform to '(?:(?P<snake_case>[a-z_]+)|(?P<PascalCase>[^a-z][A-Za-z]+)|(?P<camelCase>[^A-Z][A-Za-z]+))$' pattern (invalid-name)
+airports/airports.py:45:8: W1514: Using open without explicitly specifying an encoding (unspecified-encoding)
+airports/airports.py:45:8: R1732: Consider using 'with' for resource-allocating operations (consider-using-with)
+airports/airports.py:70:4: C0104: Disallowed name "foo" (disallowed-name)
+airports/airports.py:17:0: W0612: Unused variable 'load_weather_for_location' (unused-variable)
 
 -----------------------------------
-Your code has been rated at 0.00/10
+Your code has been rated at 8.45/10
 
