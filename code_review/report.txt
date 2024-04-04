@@ -1,13 +1,3 @@
-./coding_problems/02-tuesday/test_tuesday.py
-./coding_problems/02-tuesday/tuesday.py
-./coding_problems/04-thursday/test_thursday.py
-./coding_problems/04-thursday/thursday.py
-./coding_problems/03-wednesday/test_wednesday.py
-./coding_problems/03-wednesday/wednesday.py
-./coding_problems/01-monday/test_monday.py
-./coding_problems/01-monday/monday.py
-./coding_problems/05-friday/test_friday.py
-./coding_problems/05-friday/friday.py
 ./countries/test_countries.py
 ./countries/countries.py
 ************* Module countries
@@ -16,18 +6,16 @@ countries/countries.py:31:7: C0123: Use isinstance() rather than type() for a ty
 -----------------------------------
 Your code has been rated at 9.74/10
 
+./coding_problems/04-thursday/thursday.py
+./coding_problems/04-thursday/test_thursday.py
+./coding_problems/05-friday/friday.py
+./coding_problems/05-friday/test_friday.py
+./coding_problems/02-tuesday/test_tuesday.py
+./coding_problems/02-tuesday/tuesday.py
+./coding_problems/01-monday/monday.py
+./coding_problems/01-monday/test_monday.py
+./coding_problems/03-wednesday/wednesday.py
+./coding_problems/03-wednesday/test_wednesday.py
 ./airports/airports.py
 ************* Module airports
-airports/airports.py:7:0: W0622: Redefining built-in 'print' (redefined-builtin)
-airports/airports.py:20:4: W0107: Unnecessary pass statement (unnecessary-pass)
-airports/airports.py:17:30: W0613: Unused argument 'lat' (unused-argument)
-airports/airports.py:17:40: W0613: Unused argument 'lng' (unused-argument)
-airports/airports.py:42:0: C0103: Function name "load_airport_JSON" doesn't conform to '(?:(?P<snake_case>[a-z_]+)|(?P<PascalCase>[^a-z][A-Za-z]+)|(?P<camelCase>[^A-Z][A-Za-z]+))$' pattern (invalid-name)
-airports/airports.py:45:8: W1514: Using open without explicitly specifying an encoding (unspecified-encoding)
-airports/airports.py:45:8: R1732: Consider using 'with' for resource-allocating operations (consider-using-with)
-airports/airports.py:70:4: C0104: Disallowed name "foo" (disallowed-name)
-airports/airports.py:17:0: W0612: Unused variable 'load_weather_for_location' (unused-variable)
-
------------------------------------
-Your code has been rated at 8.45/10
-
+airports/airports.py:123:53: E0001: Parsing failed: 'f-string: unmatched '[' (airports, line 123)' (syntax-error)
