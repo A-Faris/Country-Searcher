@@ -5,35 +5,65 @@ import argparse
 
 import json
 from rich import print
+from rich.table import Table
+from rich.progress import track
+from datetime import datetime
 from rich.traceback import install
 install()
 
-# Instead of using print(), you should use the Console from Rich instead.
 console = Console(record=True)
 
-API_KEY = '3a4cdb65-8e74-44a2-bf9b-526d6f9f607b'
+FLIGHT_API_KEY = '3a4cdb65-8e74-44a2-bf9b-526d6f9f607b'
+WEATHER_API_KEY = '377d489eceb84769ad5103828240404'
+
+
+def save_as_json(data):
+    with open('data.json', 'w', encoding='utf-8') as f:
+        json.dump(data, f, ensure_ascii=False, indent=4)
+    f.close()
 
 
 def load_weather_for_location(lat: str, lng: str) -> dict:
     """Given a location, load the current weather for that location"""
 
-    pass
+    response = requests.get(
+        f"http://api.weatherapi.com/v1/current.json?q={lat},{lng}&key={WEATHER_API_KEY}")
+
+    response.raise_for_status()
+
+    return {"Weather": response.json()["current"]["condition"]["text"],
+            "Temp": response.json()["current"]["temp_c"]}
 
 
 def render_flights(flights: list) -> None:
     """Render a list of flights to the console using the Rich Library
 
     Consider using Panels, Grids, Tables or any of the more advanced features of the library"""
-    print(flights)
-    print(type(flights))
-    print(len(flights))
+    table = Table(title="Flights")
+
+    table.add_column("Flight No.", style="cyan", justify="right")
+    table.add_column("Dept. Time", style="cyan", justify="right")
+    table.add_column("Destination", style="purple")
+    table.add_column("Delayed?", style="green", justify="right")
+    table.add_column("Weather", style="green", justify="right")
+    table.add_column("Temp", style="green", justify="right")
+
+    for i in range(len(flights["Flight No."])):
+        table.add_row(flights["Flight No."][i],
+                      flights["Dept. Time"][i],
+                      flights["Destination"][i],
+                      flights["Delayed?"][i],
+                      flights["Weather"][i],
+                      str(flights["Temp"][i]))
+
+    console.log(table)
 
 
 def get_flights_from_iata(iata: str) -> list:
     """Given an IATA get the flights that are departing from that airport from Airlabs"""
 
     response = requests.get(
-        f"https://airlabs.co/api/v9/schedules?dep_iata={iata}&api_key={API_KEY}")
+        f"https://airlabs.co/api/v9/schedules?dep_iata={iata}&api_key={FLIGHT_API_KEY}")
 
     response.raise_for_status()
     return response.json()["response"]
@@ -67,12 +97,34 @@ def find_airport_from_iata(iata: str, airport_data: list) -> dict:
     Find an airport from the airport_data given a name
     Should return exactly one airport object
     """
-    foo = {"departing iata": iata,
-           "arriving iata": []}
-    for airport in airport_data:
+    data = {"Flight No.": [],
+            "Dept. Time": [],
+            "Destination": [],
+            "Delayed?": [],
+            "Weather": [],
+            "Temp": []}
+
+    for airport in track(airport_data, description="Working..."):
         if airport["dep_iata"] == iata:
-            foo["arriving iata"].append(airport["arr_iata"])
-    return foo
+            data["Flight No."].append(airport["flight_number"])
+            data["Dept. Time"].append(airport["dep_time_utc"])
+            for name in load_airport_JSON():
+                if name["iata"] == airport["arr_iata"]:
+                    condition = load_weather_for_location(
+                        name['lat'], name['lon'])
+                    data["Weather"].append(condition["Weather"])
+                    data["Temp"].append(condition["Temp"])
+                    if name["name"]:
+                        data["Destination"].append(name["name"])
+                    else:
+                        data["Destination"].append(None)
+                    break
+            if airport["dep_delayed"]:
+                data["Delayed?"].append(f"{airport["dep_delayed"]} mins")
+            else:
+                data["Delayed?"].append("On Time")
+
+    return data
 
 
 def get_airport() -> str:
@@ -83,24 +135,39 @@ def get_airport() -> str:
 
     parser.add_argument("--name",
                         type=str,
-                        default="London Heathrow Airport",
+                        default="London Gatwick Airport",
+                        help="add file format")
+
+    parser.add_argument("--export",
+                        type=str,
+                        default="json",
                         help="add airport name")
 
     args = parser.parse_args()
 
     name = args.name.title()
 
+    print(name)
+    if name == "html":
+        console.save_html(f"html_file_{datetime.now()}.html")
+    elif name == "json":
+        save_as_json(data)
+
     return name
 
 
 if __name__ == "__main__":
+    console.log(
+        "✈️✈️✈️✈️✈️✈️✈️✈️\nWelcome to the Airports Informer Tool\n✈️✈️✈️✈️✈️✈️✈️✈️")
+
     airport_data = load_airport_JSON()
     airport_search = get_airport()
     airport_names = find_airports_from_name(airport_search, airport_data)
-    airport = airport_names[0]
+
     if len(airport_names) > 1:
         airport = Prompt.ask(
             "Multiple airports found, please choose one: ", choices=airport_names)
+    airport = airport_names[0]
 
     for data in airport_data:
         if airport == str(data["name"]):
@@ -112,7 +179,3 @@ if __name__ == "__main__":
     airport_landing = find_airport_from_iata(iata, flights)
 
     render_flights(airport_landing)
-
-
-# console.print_exception()
-console.save_html("html_file.html")
