@@ -1,7 +1,7 @@
 {
  "files": [
   {
-   "file_name": "./countries/test_countries.py",
+   "file_name": "./coding_problems/02-tuesday/test_tuesday.py",
    "errors": [
     "countries/countries.py:31:7: C0123: Use isinstance() rather than type() for a typecheck. (unidiomatic-typecheck)"
    ],
