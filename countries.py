@@ -1,6 +1,6 @@
 from requests import get
-
 from rich.traceback import install
+
 install()
 
 
@@ -13,15 +13,10 @@ class APIError(Exception):
         self.code = code
 
 
-def print_data(country_data: dict):
-    """Displays country data from a dict."""
-    print(country_data)
-
-
 def fetch_data(country_name: str) -> dict:
     """Returns a dict of country data from the API."""
     response = get(
-        f'https://restcountries.com/v3.1/name/{country_name.lower()}')
+        f'https://restcountries.com/v3.1/name/{country_name.lower()}', timeout=10)
 
     if response.status_code == 404:
         raise APIError("Unable to locate matching country.", 404)
@@ -39,20 +34,17 @@ def fetch_data(country_name: str) -> dict:
 
 def main():
     """Repeatedly prompts the user for country names and displays the result."""
-    print(" ")
-    print("####################")
+    print("\n####################")
     print("Welcome to the REST Countries Searcher")
-    print("####################")
-    print(" ")
+    print("####################\n")
 
-    while 1:
+    while True:
         entry = input("Search for a country: ")
         print(f"You searched for: {entry}")
-        print("Fetching...")
-        print(" ")
+        print("Fetching...\n")
         try:
             country_data = fetch_data(entry)
-            print_data(country_data)
+            print(country_data)
         except APIError as e:
             print(e.message)
         print(" ")

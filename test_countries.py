@@ -1,22 +1,24 @@
-# pylint: skip-file
-
 import pytest
+
+from unittest.mock import patch
 
 from countries import fetch_data, APIError
 
 
 class TestFetchData:
     """Contains tests of the fetch_data function."""
-
+    @patch("requests.get")
     def test_calls_requests_get_method(self, requests_mock):
         """Tests that fetch_data makes exactly one GET request."""
-        requests_mock.get("https://restcountries.com/v3.1/name/test", status_code=200, json={})
+        requests_mock.get(
+            "https://restcountries.com/v3.1/name/test", status_code=200, json={})
         fetch_data("test")
 
         assert requests_mock.called
         assert requests_mock.call_count == 1
         assert requests_mock.last_request.method == "GET"
 
+    @patch("requests.get")
     def test_returns_a_valid_dict(self, requests_mock):
         """Checks that fetch_data returns a valid dict with relevant keys."""
         requests_mock.get("https://restcountries.com/v3.1/name/test", status_code=200, json={
@@ -25,7 +27,7 @@ class TestFetchData:
             },
             "flag": "test",
             "languages": {
-              "test": "Testian"
+                "test": "Testian"
             },
         })
         res = fetch_data("test")
@@ -35,18 +37,22 @@ class TestFetchData:
         assert "flag" in res
         assert "languages" in res and isinstance(res["languages"], dict)
 
+    @patch("requests.get")
     def test_raises_404_error(self, requests_mock):
         """Checks that fetch_data raises the correct error upon a 404 response."""
-        requests_mock.get("https://restcountries.com/v3.1/name/test", status_code=404)
+        requests_mock.get(
+            "https://restcountries.com/v3.1/name/test", status_code=404)
         with pytest.raises(APIError) as exception:
             fetch_data("test")
-        
+
         assert exception.value.message == "Unable to locate matching country."
         assert exception.value.code == 404
 
+    @patch("requests.get")
     def test_raises_500_error(self, requests_mock):
         """Checks that fetch_data raises the correct error upon a 500 response."""
-        requests_mock.get("https://restcountries.com/v3.1/name/test", status_code=500)
+        requests_mock.get(
+            "https://restcountries.com/v3.1/name/test", status_code=500)
         with pytest.raises(APIError) as exception:
             fetch_data("test")
 
